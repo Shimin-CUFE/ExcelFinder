@@ -13,12 +13,10 @@ msg_list = []
 msg = tk.StringVar()
 
 
-
-
-
 def get_path():
     p = askdirectory()
     path.set(p)
+
 
 def click():
     print(tx)
@@ -42,6 +40,6 @@ tk.Button(root, text='Choose', command=get_path).grid(row=0, column=2)
 tk.Label(root, text='Value to Search: ').grid(row=1, column=0)
 entry2 = tk.Entry(root, textvariable=value).grid(row=1, column=1)
 tk.Button(root, text='Search!', command=click).grid(row=1, column=2)
-tx = tk.Text(root).grid(row=2, column=0, columnspan=3)
+tx = tk.Text(root).grid(row=2, column=0, columnspan=3)  # NoneType Object
 
 root.mainloop()
